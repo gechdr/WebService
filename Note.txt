@@ -1,0 +1,42 @@
+/^[A-Za-z]+$/.test(temp) -> only letter
+
+/^\d+$/.test(temp) -> only number
+
+if (/^([a-zA-Z0-9]+)$/.test(temp)) {
+    if (/\d/.test(temp)) {
+        if (/[A-Za-z]/i.test(temp)) {
+            console.log(true);
+        }
+    }
+}
+
+must contains atleast 1 letter and 1 number
+
+function isValidTime(time){
+  return /^([01]\d|2[0-3]):?([0-5]\d)$/.test(time);
+}
+
+function isValidDate(date)
+{
+  if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(date))
+    return false;
+
+  var tempDate = date.split("/");
+  if (tempDate.length == 0) {
+    return false;
+  }
+
+  var day = parseInt(tempDate[0], 10);
+  var month = parseInt(tempDate[1], 10);
+  var year = parseInt(tempDate[2], 10);
+
+  if(year < 1000 || year > 3000 || month <= 0 || month > 12)
+      return false;
+
+  var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+  if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+      monthLength[1] = 29;
+
+  return day > 0 && day <= monthLength[month - 1];
+};
