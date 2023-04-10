@@ -1,0 +1,4 @@
+TEMINAL
+Access Library -> npm init -y
+Express -> npm install express
+Nodemon(auto update) -> npx nodemon <filename>
