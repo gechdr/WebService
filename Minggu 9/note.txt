@@ -1,0 +1,28 @@
+sequelize-cli
+
+//-   https://sequelize.org/docs/v6/other-topics/migrations/
+//-   https://sequelize.org/docs/v6/other-topics/query-interface/
+//-   https://sequelize.org/docs/v6/core-concepts/model-basics/#data-types
+//-   https://sequelize.org/api/v6/class/src/dialects/abstract/query-interface.js~queryinterface
+
+// npm install sequelize-cli --save-dev
+// npx sequelize-cli init (create folder)
+// npx sequelize-cli db:create (create db)
+
+// npx sequelize-cli model:generate --name Buku --attributes nama:string,tahunTerbit:integer
+// npx sequelize-cli model:generate --name KategoriBuku --attributes nama:string
+
+// npx sequelize-cli db:migrate (run migrate)
+// npx sequelize-cli seed:generate --name buku_seed (create seed)
+// npx sequelize-cli db:seed:all (run seed)
+
+// npx sequelize-cli db:seed:undo:all (undo seed)
+// npx sequelize-cli db:migrate:undo -> ini undo 1 step aja
+// npx sequelize-cli db:migrate:undo:all -> undo sampai awal
+
+generate file migration
+// npx sequelize-cli model:generate --name Buku --attributes nama:string,tahunTerbit:integer
+
+generate file model + migration
+// npx sequelize-cli migration:generate --name add_buku_fk_column
+
