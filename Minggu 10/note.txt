@@ -1,0 +1,4 @@
+Environments :
+- Development (Undeployed || localhost)
+- Staging (Verify Development -> Production)
+- Production (Deployed)
